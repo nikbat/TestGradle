@@ -167,7 +167,7 @@ function parse_cli() {
               check_file "${!i}"
             ;;
 
-            -v|--version)
+      -v|--version)
         i=$((i + 1))
         UPLOAD_VERSION="${!i}"
               check_version "${!i}"

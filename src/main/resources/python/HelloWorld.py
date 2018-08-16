@@ -71,5 +71,35 @@ print(set1)
 
 str1 = 'abcd'
 
+import os
+
+fileDir =  os.path.dirname(os.path.realpath(__file__))
+fileDir1 = os.path.dirname(fileDir)
+fileDir2 = os.path.dirname(fileDir1)
+fileDir3 = os.path.dirname(fileDir2)
+fileDir4 = os.path.dirname(fileDir3)
+fileDir5 = os.path.dirname(fileDir4)
+filePath = os.path.realpath(__file__)
+fileName = os.path.basename(__file__);
+gradle_exe = os.path.join(fileDir, 'gradlew')
+
+print('fileDir =', fileDir)
+print('fileDir1 =', fileDir1)
+print('fileDir1 =', fileDir2)
+print('fileDir1 =', fileDir3)
+print('fileDir1 =', fileDir4)
+print('fileDir1 =', fileDir5)
+
+print(filePath)
+print(fileName)
+print(gradle_exe)
+
+project_dir = os.path.abspath(os.path.join(fileDir, os.pardir, os.pardir, os.pardir, os.pardir ))
+
+
+def run_gradle(root_dir, gradle_exe, args, parser=None):
+    gradleCommand =  '{gradle} {args}'.format(root_dir=root_dir, gradle=gradle_exe, args=args)
+    print(gradleCommand)
+
 
 
