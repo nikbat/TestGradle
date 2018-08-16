@@ -2,108 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32ea819-e33a-497b-8e87-537969c76913" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/GFG/SmallerElements.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/bt/BTree2.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/bt/TreePrinter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/BigIntegerAdd.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/Difference.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/FileRead.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/FizBuzz.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/HourGlass.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/JavaStack.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/Lexicographically.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/Loop.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/MaxDifferince.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/MaxXOR.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/OneDArrayTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/Range.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nic/test/myRegex.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nlp/NLP.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/nlp/NLPTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/com/tech/ShiftingForSomeReason.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/ArrayQueue.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/BTree.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/BitShift.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/BuilderPattern.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/GenerateNumber.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/L2Node.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/ListStack.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/MissingNumberInArray.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/MyEnum.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/MyGenerics.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/MyInteger.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/MyIntegerTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/MyThread.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/MyThreadLocal.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/NextHighestInteger.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/Recc.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/ReverseString.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/SampleTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/ScannerExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/Singleton.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/SomeClass.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/SomeInterface.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/Stack.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/Test.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/TestGuava.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/WaitThread.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/generic/WebsocketClient.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/gg/DijkstraPriorityQueue.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/gg/Edge.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/gg/Vertex.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/ll/LLFinal.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/ll/LNode.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/ll/MyLL.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/ll/MyLinkedList.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/ll2/MyLinkedList2.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/mythreads/CallFooInOrder.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/mythreads/Foo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/mythreads/MyBQ.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/mythreads/MyCountDownLatch.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/mythreads/MySemaphore.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/mythreads/MySemaphore0.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/mythreads/MySemaphore1.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/mythreads/MySemaphore2.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/mythreads/PCWOBQ.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/mythreads/ReadWriteLock.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/mythreads/TestThread.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/sa/Recursion.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/sa/SA.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/sa/Sort.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/sa/Sort1.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/sa/Sort2.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/sa/StringArray1.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/sa/StringArrays.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/sa/StringArrays2.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/sa/TestingString.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/stack/MyQueue.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/stack/MyStack.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/stack/MyStack1.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/stack/MyStack2.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/stack/Node.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/streams/TestStreams.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/CollectorHarness.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/Dish.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/Grouping.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/GroupingTransactions.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/PartitionPrimeNumbers.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/Partitioning.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/Reducing.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/Summarizing.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/Test8.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/ToListCollector.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/Trader.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/test8/Transaction.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/GitCommands" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/python/compmgr.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/python/phase1.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/scripts/one.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/config/ConfigHelper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/config/ConfigManager.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/config/ConfigManagerFactory.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/config/DefaultConfigManager.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/config/EncrypterDecrypter.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/config/EncryptionProducer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nick/config/JsonDocument.java" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/TestGradle_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/TestGradle_main.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/TestGradle_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/TestGradle_test.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/python/HelloWorld.py" afterPath="$PROJECT_DIR$/src/main/resources/python/HelloWorld.py" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scripts/component-manager.sh" afterPath="$PROJECT_DIR$/src/main/resources/scripts/component-manager.sh" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -122,20 +35,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="compmgr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/python/compmgr.py">
+      <file leaf-file-name="phase1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/python/phase1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2535">
-              <caret line="169" column="21" lean-forward="false" selection-start-line="169" selection-start-column="21" selection-end-line="169" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="500">
+              <caret line="1057" column="58" lean-forward="false" selection-start-line="1057" selection-start-column="58" selection-end-line="1057" selection-end-column="58" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GitCommands" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/GitCommands">
+      <file leaf-file-name="ConfigManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/ConfigManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -144,11 +55,85 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phase1.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/python/phase1.py">
+      <file leaf-file-name="EncrypterDecrypter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/EncrypterDecrypter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="1039" column="39" lean-forward="true" selection-start-line="1039" selection-start-column="39" selection-end-line="1039" selection-end-column="39" />
+            <state relative-caret-position="60">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigManagerFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/ConfigManagerFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EncryptionProducer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/EncryptionProducer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/ConfigHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultConfigManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/DefaultConfigManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonDocument.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/JsonDocument.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -344,8 +329,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4594522392000" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="3782322254" />
+        <entry key="$PROJECT_DIR$" value="4597404915000" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="3291597958" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2881256037" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="4098721249" />
       </map>
@@ -466,7 +451,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/resources/scripts/bash_tutorial" />
         <option value="$PROJECT_DIR$/src/main/resources/scripts/component-manager.sh" />
         <option value="$PROJECT_DIR$/src/main/resources/scripts/one.sh" />
@@ -476,6 +460,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/nick/generic/GenerateNumber.java" />
         <option value="$PROJECT_DIR$/src/main/resources/python/compmgr.py" />
         <option value="$PROJECT_DIR$/src/main/resources/python/phase1.py" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nick/config/EncrypterDecrypter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nick/config/DefaultConfigManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nick/config/JsonDocument.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -510,6 +498,51 @@
               <item name="TestGradle" type="b2602c69:ProjectViewProjectNode" />
               <item name="TestGradle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="TestGradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestGradle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestGradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestGradle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestGradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestGradle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestGradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestGradle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestGradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestGradle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="nick" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestGradle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestGradle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="nick" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -527,7 +560,11 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nick.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/nick/config" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/com/nick" />
       <recent name="$PROJECT_DIR$/src/main/resources/scripts" />
@@ -729,7 +766,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531507799198</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update">
+      <created>1534388892171</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534388892171</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -748,6 +792,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25121164" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -760,7 +805,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -798,7 +842,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inititate Gradle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inititate Gradle" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -903,14 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1112,7 +1149,7 @@
         <state relative-caret-position="2535">
           <caret line="169" column="21" lean-forward="false" selection-start-line="169" selection-start-column="21" selection-end-line="169" selection-end-column="21" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1127,8 +1164,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/python/phase1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="1039" column="39" lean-forward="true" selection-start-line="1039" selection-start-column="39" selection-end-line="1039" selection-end-column="39" />
+        <state relative-caret-position="500">
+          <caret line="1057" column="58" lean-forward="false" selection-start-line="1057" selection-start-column="58" selection-end-line="1057" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/ConfigManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/EncrypterDecrypter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/ConfigManagerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/EncryptionProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/ConfigHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/JsonDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nick/config/DefaultConfigManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding />
         </state>
       </provider>
