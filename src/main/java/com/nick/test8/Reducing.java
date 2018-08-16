@@ -1,7 +1,7 @@
 package com.nick.test8;
 
 import static java.util.stream.Collectors.reducing;
-import static test8.Dish.menu;
+import static com.nick.test8.Dish.menu;
 
 public class Reducing {
 

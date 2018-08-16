@@ -4,11 +4,6 @@
 
 package com.nick.config;
 
-import oracle.fa.lcm.config.spi.ConfiguredServiceProvider;
-import oracle.fa.lcm.model.JsonDocument;
-import oracle.fa.lcm.util.Hk2Util;
-import org.apache.commons.cli.*;
-import org.glassfish.hk2.api.ServiceLocator;
 
 import java.io.*;
 import java.util.Collection;
@@ -19,6 +14,7 @@ public class ConfigHelper {
 
   static boolean HANDLE_EXCEPTION = true;
 
+  /*
   public static void main(String args[]) {
     // use the locator to find the ConfigManager...
     final ServiceLocator locator = Hk2Util.createAndPopulateServiceLocator();
@@ -222,5 +218,6 @@ public class ConfigHelper {
 
     System.out.println(cfg);
   }
+  */
 
 }

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;
-import static test8.Dish.menu;
+import static com.nick.test8.Dish.menu;
 
 public class Test8 {
 

@@ -5,7 +5,7 @@ import java.util.IntSummaryStatistics;
 import java.util.function.BinaryOperator;
 
 import static java.util.stream.Collectors.*;
-import static test8.Dish.menu;
+import static com.nick.test8.Dish.menu;
 
 public class Summarizing {
 

@@ -3,14 +3,8 @@
  */
 package com.nick.config;
 
-import org.glassfish.hk2.api.Factory;
-import org.jvnet.hk2.annotations.Service;
 
-import javax.inject.Singleton;
-
-@Service
-@Singleton
-public class ConfigManagerFactory implements Factory<ConfigManager> {
+public class ConfigManagerFactory { //implements Factory<ConfigManager> {
 
   private static final DefaultConfigManager defaultConfigManager = new DefaultConfigManager();
 
@@ -18,12 +12,12 @@ public class ConfigManagerFactory implements Factory<ConfigManager> {
     return defaultConfigManager;
   }
 
-  @Override
+  //@Override
   public ConfigManager provide() {
     return defaultConfigManager;
   }
 
-  @Override
+  //@Override
   public void dispose(ConfigManager instance) {
     // NOP
   }

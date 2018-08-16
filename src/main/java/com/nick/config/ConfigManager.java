@@ -4,15 +4,12 @@
 
 package com.nick.config;
 
-import oracle.fa.lcm.model.JsonDocument;
-import org.jvnet.hk2.annotations.Contract;
 
 import java.util.Set;
 
 /**
  * Provides configuration management to an arbitrary set of subsystems in the runtime.
  */
-@Contract
 public interface ConfigManager extends EncrypterDecrypter {
 
   /**
