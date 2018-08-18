@@ -1,13 +1,45 @@
 package com.nick.sa;
 
+
 import org.apache.commons.lang3.ArrayUtils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class SA {
+
+  //TODO Please do following
+
+  //http://javarevisited.blogspot.com/2015/03/20-examples-of-date-and-time-api-from-Java8.html#more
+
+  //Find a pair of numbers in array with specific sum
+  //1. Two loops solution O(N^2)
+  //2. Hashtable go to each element and check if sum difference exisits in hashtable. O(1) but if hashtable is large it is a problem
+  //3. solution is sort the array start with left and right most corner and check addition of these against sum log(n)
+
+  //http://javarevisited.blogspot.com/2014/08/how-to-find-all-pairs-in-array-of-integers-whose-sum-equal-given-number-java.html#more
+
+  //http://javarevisited.blogspot.com/2015/03/how-to-find-largest-prime-factor-of.html#more
+  private void findLargestPrimeFactor(int number){
+    int copyOfNumber = number;
+    int i;
+    for(i = 2; i < copyOfNumber; i ++){
+      if(copyOfNumber % 2 == 0){
+        copyOfNumber = copyOfNumber/i;
+        i--;
+      }
+    }
+    System.out.println(i);
+  }
+
+  //fibnachi
+  long findFib(int  n){
+    if(n <= 2){
+      return 1;
+    }else{
+      return findFib(n-1) + findFib(n-2);
+    }
+  }
 
   private static boolean isAllCharsUnique1(String str){
     if(str == null){
@@ -168,10 +200,10 @@ public class SA {
 
     for(int i = 0; i<matrix.length; i++){
       for(int j = 0; j < matrix[i].length; j++){
-         if(matrix[i][j] == 0){
-           rows[i] = 1;
-           columns[j] = 1;
-         }
+        if(matrix[i][j] == 0){
+          rows[i] = 1;
+          columns[j] = 1;
+        }
       }
     }
     for(int i = 0; i<matrix.length; i++){
@@ -464,6 +496,41 @@ public class SA {
     paths[x][y] = 0;
 
     return false;
+  }
+
+  //https://www.geeksforgeeks.org/rat-in-a-maze-backtracking-2/
+  static boolean solveMaze1(int[][] paths, int x, int y , int i, int j){
+    if(stepMaze1(paths, x, y, i, j)){
+      paths[x][y] = 5;
+      return true;
+    }
+    return false;
+  }
+
+  static boolean stepMaze1(int[][] paths, int x, int y , int i, int j){
+    if(x == i && y == j){
+      return true;
+    }
+
+    if(x < 0 || y < 0 || x >= paths.length || y >= paths.length){
+      return false;
+    }
+
+    if(paths[x][y] == 1 || paths[x][y] == 2){
+      return false;
+    }
+
+    paths[x][y] = 2;
+
+    if(stepMaze1(paths,y+1, y, i, j)) return true;
+    if(stepMaze1(paths,x, x-1, i, j)) return true;
+    if(stepMaze1(paths,x+1, y, i, j)) return true;
+    if(stepMaze1(paths,x, y-1, i, j)) return true;
+
+    paths[x][y] = 0;
+
+    return false;
+
   }
 
   static boolean[] used;
@@ -787,7 +854,7 @@ public class SA {
   }
 
 
-//http://javaconceptoftheday.com/diamond-pattern-program-in-java/
+  //http://javaconceptoftheday.com/diamond-pattern-program-in-java/
   public void printDiomand(int rows){
     int mid = rows/2;
     int starcount = 1;
@@ -965,7 +1032,7 @@ public class SA {
 
       if(currentSum > sum){
         sum = currentSum;
-         l = i;
+        l = i;
       }
 
       if(currentSum < 0){
@@ -1172,7 +1239,7 @@ public class SA {
     int ai = 0;
     for(ElementFrequency ef : l){
       for(int k = 0; k < ef.frequency; k++)
-      a[ai++] = ef.element;
+        a[ai++] = ef.element;
     }
 
     System.out.println(Arrays.toString(a));
@@ -1313,6 +1380,8 @@ public class SA {
 
   //https://practice.geeksforgeeks.org/problems/equilibrium-point/0
   //https://www.youtube.com/watch?v=AjY2fFl58r8
+  //in first iteration calculate the sum (total)
+  //in second iteration create leftsum by adding each element &&  deduct each element from the sum(total sum), when leftsum == sum that is your equilibrium point
   static int equilibriumPoint(int[] a){
     if(a.length == 1){
       return 1;
@@ -1508,9 +1577,76 @@ public class SA {
     return -1;
   }
 
+  //http://javarevisited.blogspot.com/2016/10/how-to-check-if-two-rectangle-overlap-in-java-algorithm.html#more
+  //http://javarevisited.blogspot.com/2016/07/how-to-calculate-gcf-and-lcm-of-two-numbers-in-java-example.html#more
+  //http://javarevisited.blogspot.com/2016/03/how-to-reverse-arraylist-in-java-using-recursion.html
+  //http://www.java67.com/2015/08/how-to-swap-two-integers-without-using.html
+  //https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237
 
+
+
+
+  static void cp(int[] a, int k){
+    Arrays.sort(a);
+    int diff = Integer.MAX_VALUE;
+
+    for(int i = 0; i < a.length; i++){
+
+      if((i + k) >= a.length){
+        break;
+      }
+
+      if(a[i+k -1] - a[i] < diff){
+        diff = a[i+k -1 ] - a[i];
+      }
+    }
+    System.out.println(diff);
+  }
+
+  //https://practice.geeksforgeeks.org/problems/kth-largest-element-in-a-stream/0
+  static List<Integer> kLargeElement = new ArrayList<>();
+  static void kLargestElementInAStream(int i, int k){
+    kLargeElement.add(i);
+    if(kLargeElement.size() <= k){
+      System.out.print(-1+",");
+    }else{
+      Collections.sort(kLargeElement);
+      System.out.print(kLargeElement.get(k)+",");
+
+    }
+  }
+
+  //https://practice.geeksforgeeks.org/problems/relative-sorting/0
+  static void relativeSorting(int[] a1, int[] a2){
+    List<Integer> l1 = Arrays.stream(a1).boxed().collect(Collectors.toList());
+    List<Integer> l2 =  Arrays.stream(a2).boxed().collect(Collectors.toList());
+
+    Collections.sort(l1, (n1, n2) -> {
+      int i1 = l2.contains(n1) ? l2.indexOf(n1) : n1;
+      int i2 = l2.contains(n2) ? l2.indexOf(n2) : n2;
+      return i1 - i2;
+    });
+
+    System.out.println(l1);
+
+  }
 
   public static void main(String[] args){
+
+    int rs1[] = {2, 1, 2, 5, 7, 1, 9, 3, 6, 8, 8};
+    int rs2[] = {2, 1, 8, 3};
+    SA.relativeSorting(rs1, rs2 );
+
+    SA.kLargestElementInAStream(10, 3);
+    SA.kLargestElementInAStream(20, 3);
+    SA.kLargestElementInAStream(11, 3);
+    SA.kLargestElementInAStream(70, 3);
+    SA.kLargestElementInAStream(50, 3);
+    SA.kLargestElementInAStream(40, 3);
+    SA.kLargestElementInAStream(100, 3);
+    SA.kLargestElementInAStream(5, 3);
+
+
     System.out.println(SA.isAllCharsUnique1("This"));
     /*System.out.println(SA.isAllCharsUnique1("Thismaynotberu"));
     System.out.println(SA.isAllCharsUnique2("This"));
@@ -1640,7 +1776,7 @@ public class SA {
 
 
     int[][] matrix = {
-                      {1,2,3,4,5,6},
+        {1,2,3,4,5,6},
         {1,2,3,4,5,6},
         {1,2,3,4,5,6},
         {1,2,3,0,5,6},
@@ -1710,6 +1846,16 @@ public class SA {
     };
 
     System.out.println(SA.solveMaze(paths,0,0,4,4));
+
+    final int[][] paths1 = {
+        {0,0,1,0,1},
+        {0,0,1,0,0},
+        {0,0,0,0,1},
+        {0,1,0,0,1},
+        {0,1,1,1,0}
+
+    };
+    System.out.println(SA.solveMaze1(paths1,0,0,4,4));
 
     //SA.permute("ABCD");
     //SA.compute("ABCD", 0);
