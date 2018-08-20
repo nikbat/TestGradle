@@ -5,6 +5,7 @@ import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class SA {
 
@@ -561,6 +562,7 @@ public class SA {
     }
   }
 
+  //combination
   static void compute(String s, int start){
     for(int i=start; i< s.length(); i++){
       sb.append(s.charAt(i));
@@ -885,6 +887,43 @@ public class SA {
       starcount--;
       System.out.println();
     }
+  }
+
+  //diamond
+  static void printDiamont(int k){
+
+    int mid = k/2;
+    int starCount = 1;
+
+    for(int i = mid; i > 0; i--) {
+
+      //print space
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+
+      //print stars
+      for (int j = 0; j < starCount; j++) {
+        System.out.print("* ");
+      }
+      System.out.println();
+      starCount++;
+    }
+
+    for(int i = 0; i <= mid; i++){
+
+      //printspace
+      for(int j = 0; j < i; j++ ){
+        System.out.print(" ");
+      }
+
+      for(int j = 0; j < starCount; j++ ){
+        System.out.print("* ");
+      }
+      System.out.println();
+      starCount--;
+    }
+
   }
 
 
@@ -1531,6 +1570,43 @@ public class SA {
     System.out.println(sb);
   }
 
+  //https://practice.geeksforgeeks.org/problems/recursively-remove-all-adjacent-duplicates/0
+  static void recursivelyRemoveAdjacentDuplicates(String s, StringBuilder sb, int i){
+    if(i >= s.length()){
+      return;
+    }
+
+    boolean checkPrev = true;
+    boolean checkNext = true;
+    boolean append = true;
+
+    if( i == 0){
+      checkPrev = false;
+    }
+
+    if( i == s.length()-1 ){
+      checkNext = false;
+    }
+    if(checkPrev){
+      if(s.charAt(i) == s.charAt(i-1)){
+        append = false;
+      }
+    }
+
+    if(checkNext){
+      if(s.charAt(i) == s.charAt(i+1)){
+        append = false;
+      }
+    }
+
+    if(append){
+      sb.append(s.charAt(i));
+    }
+
+    recursivelyRemoveAdjacentDuplicates(s,sb,i+1);
+
+  }
+
   //int[] a = {9,12,15,17,25,28,32,37,3,5,7,8};
 
   static int findElementInARotatedArray(int[] a, int k){
@@ -1577,14 +1653,6 @@ public class SA {
     return -1;
   }
 
-  //http://javarevisited.blogspot.com/2016/10/how-to-check-if-two-rectangle-overlap-in-java-algorithm.html#more
-  //http://javarevisited.blogspot.com/2016/07/how-to-calculate-gcf-and-lcm-of-two-numbers-in-java-example.html#more
-  //http://javarevisited.blogspot.com/2016/03/how-to-reverse-arraylist-in-java-using-recursion.html
-  //http://www.java67.com/2015/08/how-to-swap-two-integers-without-using.html
-  //https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237
-
-
-
 
   static void cp(int[] a, int k){
     Arrays.sort(a);
@@ -1628,10 +1696,286 @@ public class SA {
     });
 
     System.out.println(l1);
+  }
+
+  static void solveTicTacToe(){
 
   }
 
+  static boolean playTicTacToe(int[][] a, int i, int j, int k){
+    if(i < 0 || i >= a.length || j < 0 || j >= a[0].length) return false;
+
+    if(a[i][j] == 0 || a[i][j] == 1) return false;
+
+    if(k != 0 || k != 1) return false;
+
+    a[i][j] = k;
+
+    return checkTicTacToe(a, k);
+
+  }
+
+  static boolean checkTicTacToe(int a[][], int k){
+    //check rows
+    for(int i = 0; i < a.length; i++){
+      if(a[i][0] == k && a[i][1] == k && a[i][2] == k) return true;
+    }
+
+    //check columns
+    for(int i = 0; i < a[0].length; i++){
+      if(a[0][i] == k && a[1][i] == k && a[2][i] == k) return true;
+    }
+
+    //check diogonals
+    if( (a[0][0] == k && a[1][1] == k && a[2][2] == k) || (a[2][0] == k && a[1][1] == k && a[0][2] == k) ) return true;
+
+    return false;
+  }
+
+  //Spirally traversing a matrix
+  //https://practice.geeksforgeeks.org/problems/spirally-traversing-a-matrix/0
+  static void spiralTraverse(int[][] a){
+
+    /*int ta[][] = {
+          sc=0          lc
+    sr=0  { 1,  2,  3,  4  },
+          { 5,  6,  7,  8  },
+          { 9,  10, 11, 12 },
+    lr=   { 13, 14, 15, 16 }
+
+    };*/
+
+    int sr = 0;
+    int sc = 0;
+
+    int lr = a.length - 1;
+    int lc = a[0].length - 1;
+
+    while(sr <= lr && sc <= lc){
+
+      //iterate first row
+      for(int i = sc;  i <= lc; i++){
+        System.out.print(a[sr][i] + ",");
+      }
+      //increase sr
+      sr++;
+      System.out.println();
+
+      //iterate last column
+      for(int i = sr; i <= lr; i++){
+        System.out.print(a[i][lc] + ",");
+      }
+      //decrease last column
+      lc--;
+      System.out.println();
+
+      //iterate last row
+      for(int i = lc; i >= sc; i--){
+        System.out.print(a[lr][i] + ",");
+      }
+      //decrease the last row
+      lr--;
+      System.out.println();
+
+      //iterate first column from below to up
+      for(int i = lr; i >= sr; i--){
+        System.out.print(a[i][sc] + ",");
+      }
+      //increase the last row
+      sc++;
+      System.out.println();
+    }
+  }
+
+  //sorting by frequency
+  //https://practice.geeksforgeeks.org/problems/sorting-elements-of-an-array-by-frequency/0
+  static void sortByFrequency(int[] a){
+    Map<Integer, Integer> frequency = new HashMap<>();
+    Arrays.stream(a).forEach(i -> {
+      frequency.merge(i, 1, Integer::sum);
+      //System.out.printf("i:%d , %s, %n", i, frequency);
+    });
+
+    a = IntStream.of(a).boxed().sorted((n1, n2) -> {
+      return (frequency.getOrDefault(n2, 0) - frequency.getOrDefault(n1, 0));
+    }).mapToInt( i->i).toArray();
+
+    System.out.println(Arrays.toString(a));
+  }
+
+  static void trianglePrint(){
+    int k = 1;
+    for(int i = 1; i < 10; i++){
+      for(int j = 0; j < i; j++){
+        System.out.print(k++ + ",");
+      }
+      System.out.println();
+    }
+  }
+
+  //String s = "[()]{}{[()()]()}";
+  static boolean parenthesisChecker(String s){
+    //put open in stack and for close peek and compare
+    Stack<Character> stack = new Stack<>();
+    s.toCharArray();
+    for(int i = 0; i < s.length(); i++){
+      char c = s.charAt(i);
+      if(c == '[' || c == '{' || c == '(') {
+        stack.push(c);
+      }else{
+        if(stack.isEmpty()) return false;
+
+        if(c == ']'){
+          if(stack.peek() != '['){
+            return false;
+          }
+        }else if(c == ')'){
+          if(stack.peek() != '('){
+            return false;
+          }
+        }else if(c == '}') {
+          if (stack.peek() != '{') {
+            return false;
+          }
+        }else{
+          return false;
+        }
+
+        stack.pop();
+      }
+
+    }
+    if(!stack.isEmpty()){
+      return false;
+    }
+
+    return true;
+  }
+
+  //https://practice.geeksforgeeks.org/problems/check-if-string-is-rotated-by-two-places/0
+  static boolean rotatedByTwoPlaces(String s1, String s2, int k){
+    if(s1 == null || s2 == null) return false;
+    if(s1.length() != s2.length()) return false;
+
+    String s = s2+s2;
+
+    int l = s.length();
+    int i = s.indexOf(s1);
+    if(i == -1) return false;
+
+    if((i + s1.length() + k) == l){
+      return true;
+    }
+    int t = Math.abs(s1.length()-k);
+    if(i + s1.length() + Math.abs(s1.length()-k)  == l ){
+      return true;
+    }
+
+    return false;
+  }
+
+  //https://practice.geeksforgeeks.org/problems/anagram/0
+  static boolean isAnnagram1(String s1, String s2){
+    if(s1 == null || s2 == null ) return false;
+    if(s1.length() != s2.length() ) return false;
+
+    int[] charcount = new int[256];
+
+    for(int i = 0; i < s1.length(); i++){
+      charcount[s1.charAt(i)]++;
+    }
+
+    for(int i = 0; i < s2.length(); i++){
+      if(charcount[s2.charAt(i)] <= 0){
+        return false;
+      }
+      charcount[s1.charAt(i)]--;
+    }
+
+    return true;
+  }
+
+  //https://practice.geeksforgeeks.org/problems/longest-common-substring/0
+  //https://www.youtube.com/watch?v=tABtJbLOQho&t=400s
+  //This implementation is wrong - see this one https://www.geeksforgeeks.org/longest-common-substring-dp-29/
+  static void longestCommonSubsequence(String s1, String s2){
+    int[][] a = new int[s1.length()][s2.length()];
+    List<String> l = null;
+    int max = Integer.MIN_VALUE;
+
+    for(int i = 0; i < s1.length(); i++){
+
+      for(int j = 0; j < s2.length(); j++){
+
+        if(s1.charAt(i) == s2.charAt(j)) {
+
+          //for first row and column set value to 1
+          if (i == 0 || j == 0) {
+
+            a[i][j] = 1;
+
+          }else{
+
+            a[i][j] = a[i-1][j-1] + 1;
+
+            if(a[i][j] > max){
+              max = a[i][j];
+              l = new ArrayList<>();
+              l.add(s1.substring(i-max+1, i+1 ));
+            }else{
+              l.add(s1.substring(i-max+1, i+1 ));
+            }
+          }
+        }
+      }
+    }
+
+    System.out.println(l);
+    System.out.println(a[s1.length()-1][s2.length()-1]);
+  }
+
+
+
+
   public static void main(String[] args){
+
+    //http://javarevisited.blogspot.com/2016/10/how-to-check-if-two-rectangle-overlap-in-java-algorithm.html#more
+    //http://javarevisited.blogspot.com/2016/07/how-to-calculate-gcf-and-lcm-of-two-numbers-in-java-example.html#more
+    //http://javarevisited.blogspot.com/2016/03/how-to-reverse-arraylist-in-java-using-recursion.html
+    //http://www.java67.com/2015/08/how-to-swap-two-integers-without-using.html
+    //https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237
+
+
+    String lcss1 ="GeeksforGeeks";
+    String lcss2 ="GeeksQuiz";
+    SA.longestCommonSubsequence(lcss1, lcss2);
+
+    System.out.println(SA.rotatedByTwoPlaces("amazon", "azonam", 2 ));
+    System.out.println(SA.rotatedByTwoPlaces("amazon", "onamaz", 2 ));
+    //String rrds = "geeksforgeek";
+    String rrds = "acaaabbbacdddd";
+    StringBuilder rrdssb = new StringBuilder();
+    SA.recursivelyRemoveAdjacentDuplicates(rrds, rrdssb, 0);
+    System.out.println(rrdssb);
+
+    String ps = "[()]{}{[()()]()}";
+    System.out.println(SA.parenthesisChecker(ps));
+
+    SA.printDiamont(5);
+    SA.trianglePrint();
+
+    int[] sf = {2, 3, 2, 4, 5, 12, 2, 3, 3, 3, 12};
+    SA.sortByFrequency(sf);
+
+    int sp[][] = {
+
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12},
+        {13, 14, 15, 16}
+    };
+
+    SA.spiralTraverse(sp);
 
     int rs1[] = {2, 1, 2, 5, 7, 1, 9, 3, 6, 8, 8};
     int rs2[] = {2, 1, 8, 3};
