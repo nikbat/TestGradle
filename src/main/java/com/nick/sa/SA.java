@@ -618,7 +618,6 @@ public class SA {
     }
   }
 
-
   //https://www.geeksforgeeks.org/rearrange-array-arri/
   //int a[] = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1}
   static void arrangeArray(int[] a){
@@ -1079,10 +1078,7 @@ public class SA {
         s = i+1;
       }
     }
-
   }
-
-
 
   //{1 2 3 7 5}
   //https://practice.geeksforgeeks.org/problems/subarray-with-given-sum/0
@@ -1897,47 +1893,459 @@ public class SA {
 
   //https://practice.geeksforgeeks.org/problems/longest-common-substring/0
   //https://www.youtube.com/watch?v=tABtJbLOQho&t=400s
-  //This implementation is wrong - see this one https://www.geeksforgeeks.org/longest-common-substring-dp-29/
-  static void longestCommonSubsequence(String s1, String s2){
-    int[][] a = new int[s1.length()][s2.length()];
-    List<String> l = null;
-    int max = Integer.MIN_VALUE;
+  //This implementation code on youtube is wrong - see this one
+  //https://www.geeksforgeeks.org/longest-common-substring-dp-29/
 
-    for(int i = 0; i < s1.length(); i++){
 
-      for(int j = 0; j < s2.length(); j++){
+  static int longestCommonSubsequence(char X[], char Y[], int m, int n) {
+    // Create a table to store lengths of longest common suffixes of
+    // substrings. Note that LCSuff[i][j] contains length of longest
+    // common suffix of X[0..i-1] and Y[0..j-1]. The first row and
+    // first column entries have no logical meaning, they are used only
+    // for simplicity of program
+    int LCStuff[][] = new int[m + 1][n + 1];
+    int result = 0;  // To store length of the longest common substring
 
-        if(s1.charAt(i) == s2.charAt(j)) {
+    // Following steps build LCSuff[m+1][n+1] in bottom up fashion
+    for (int i = 0; i <= m; i++) {
+      for (int j = 0; j <= n; j++) {
+        if (i == 0 || j == 0)
+          LCStuff[i][j] = 0;
+        else if (X[i - 1] == Y[j - 1]) {
+          LCStuff[i][j] = LCStuff[i - 1][j - 1] + 1;
+          result = Integer.max(result, LCStuff[i][j]);
+        } else
+          LCStuff[i][j] = 0;
+      }
+    }
+    return result;
+  }
 
-          //for first row and column set value to 1
-          if (i == 0 || j == 0) {
+  static int longestCommonSubsequence(char[] c1, char[] c2){
+    int m = c1.length;
+    int n = c2.length;
+    int[][] a = new int[m+1][n+1];
+    int result = 0;
 
-            a[i][j] = 1;
+    for(int i = 0; i <= m; i++){
+      for(int j = 0; j <= n; j++){
+        if(i == 0 || j == 0){
+          a[i][j] = 0;
+        }else if(c1[i-1] == c2[j-1]){
+          a[i][j] = a[i-1][j-1]+1;
+          result = Math.max(result, a[i][j]);
+        }else{
+          a[i][j] = 0;
+        }
 
-          }else{
+      }
+    }
+    return result;
+  }
 
-            a[i][j] = a[i-1][j-1] + 1;
+  //https://www.geeksforgeeks.org/longest-common-prefix-set-4-binary-search/
+  static String findLongestCommonPrefix(String[] a, int n){
+    String result = "";
+    int index = findMinimumLength(a, n); //find the minimum length string,
+    int s = 0;
+    int l = index;
+    //now find the prefix using the binary search, if first half of minimium string matches add that result,
+    //similarly check the second half of minimum string
+    while(s < l){
+      int m = (s+l)/2;
+      if(allContainsPrefix(a,n,a[0], s, m)){
+        result = result + a[0].substring(s,m+1);
+        s = m+1;
+      }else{
+        l = m-1;
+      }
+    }
+    return result;
+  }
 
-            if(a[i][j] > max){
-              max = a[i][j];
-              l = new ArrayList<>();
-              l.add(s1.substring(i-max+1, i+1 ));
-            }else{
-              l.add(s1.substring(i-max+1, i+1 ));
-            }
-          }
+  static boolean allContainsPrefix(String[] a, int n, String cstr, int s, int l){
+    for(int i = 0; i < a.length; i++){
+      String tStr = a[i];
+      for(int j = s; j <=l; j++){
+        if(cstr.charAt(j) != tStr.charAt(j)){
+          return false;
         }
       }
     }
 
-    System.out.println(l);
-    System.out.println(a[s1.length()-1][s2.length()-1]);
+    return true;
   }
 
+  static int findMinimumLength(String[] a, int n){
+    int min = Integer.MAX_VALUE;
+    int index = -1;
 
+    for(int i = 0; i < a.length; i++){
+      if(a[i].length() < min){
+        min = a[i].length();
+        index = i;
+      }
+    }
+    return min;
+
+  }
+
+  //https://www.geeksforgeeks.org/maximum-power-of-jump-required-to-reach-the-end-of-string/
+  //This array contains only 0 and 1.
+  static int maximumJumpToReach(int[] a){
+    //find the last element of the the a
+    int l = a[a.length -1];
+    int maxJump = 0;
+    int start = 0;
+
+    for(int i = 0; i < a.length; i++){
+      if(a[i] == l){
+        if(maxJump > start-i){
+          maxJump = i-start;
+        }
+        start = i;
+      }
+    }
+    return maxJump;
+  }
+
+  //https://www.geeksforgeeks.org/number-of-counterclockwise-shifts-to-make-a-string-palindrome/
+  static int numberOfCounterClockwise(){
+    String s = "baabbccb"; //baabbccbbaabbccb = ba[abbccbba]abbccb
+    int n = s.length();
+
+    int left = 0;
+    int right = s.length() - 1;
+
+    s = s+s;
+    int count = 0;
+
+    while (right < 2 * n - 1) {
+      /*if (isPalindrome(s, left, right)){
+        break;
+      }
+      // If string is not palindrome
+      // then increase count of number
+      // of shifts by 1.
+      cnt++;
+
+      left++;
+      right++; */
+    }
+
+    return count;
+
+  }
+
+  //https://www.geeksforgeeks.org/minimum-splits-in-a-binary-string-such-that-every-substring-is-a-power-of-4-or-6/
+  static int chekBinaryStringPowerOf4or6(String s, int k){
+    int result = -1;
+
+    //following code is to split the string into k parts
+    /*for(int i = 0; i < s.length(); i++){
+      if ( (i + k) >= s.length()) break;
+      System.out.println(s.substring(i, i+k));
+    }*/
+
+    for(int i = 0; i < s.length(); i++){
+      for(int j = i+2; j < s.length(); j++){
+
+        if(isPowerOf(Integer.parseInt(s.substring(i,j)), 4) ||
+            isPowerOf(Integer.parseInt(s.substring(i,j)), 6) ){
+
+          result++;
+          System.out.println(s.substring(i,j));
+        }
+      }
+    }
+    return result;
+  }
+
+  static boolean isPowerOf(int number, int k){
+    int copyOfNumber = number;
+    if(number == 0) return true;
+    if(number == 1) return false;
+    while(copyOfNumber > 1){
+      if(copyOfNumber % k != 0) {
+        return false;
+      }
+      copyOfNumber = copyOfNumber/k;
+
+    }
+    return true;
+  }
+
+  static void addBinary(String s1, String s2, int carry, int index, StringBuilder result){
+
+    if(s1 == null && s2 ==null) {
+      if(carry != -1){
+        result.append(carry);
+        return;
+      }
+    }
+
+    int i1 = 0;
+    int i2 = 0;
+    int newCarry = -1;
+
+    if(s1 != null){
+      i1 = s1.charAt(index) - '0';
+    }
+    if(s2 != null){
+      i2 = s2.charAt(index) - '0';
+    }
+
+    if(i1 == 1 && i2 == 1){
+      result.append("0");
+      newCarry = 1;
+    }else if(i1 == 0 && i2 == 0){
+      if(carry == 0){
+        result.append("0");
+      }else if(carry == 1){
+        result.append("1");
+      }
+      newCarry = 0;
+    }else if(i1 == 0 || i2 == 0){
+      if(carry == 0){
+        result.append("1");
+        newCarry = 0;
+      }else if(carry == 1){
+        result.append("0");
+        newCarry = 1;
+      }
+    }
+
+    index = index+1;
+    System.out.println(s1.length());
+    if(s1 != null && index >= s1.length() ){
+      s1 = null;
+    }
+    if(s2 != null && index >= s2.length() ){
+      s2 = null;
+    }
+
+
+    addBinary(s1, s2, newCarry,  index, result);
+  }
+
+  static void longestSubStringWithoutRepeatingChars(String s){
+
+    int[] c = new int[256];
+    char[] ca = s.toCharArray();
+    int max = 0;
+    int start = 0;
+    //start 2 loops and calculate the max till you see a repeating char;
+    for(int i = 0; i < ca.length; i++){
+      start = i;
+      c = new int[256];
+      for(int j = i; j < ca.length; j++) {
+        if (c[ca[j]] > 0) {
+          if (max < j - start) {
+            max = j - start;
+          }
+          break;
+        }
+        c[ca[j]]++;
+      }
+    }
+    System.out.println(max);
+  }
+
+  static void longestSubStringWithDistinctVowles(String s, int k){
+    Character[] vowles = {'a','e', 'i', 'o', 'u'};
+
+    List<Character> vList = Arrays.asList(vowles);
+
+    char[] ca = s.toCharArray();
+    int[] count = new int[256];
+
+    int max = 0;
+
+    for(int i = 0; i < ca.length; i++){
+
+      count = new int[256];
+      char vowel = ' ';
+
+      int vowelCount = 0;
+      for(int j = i; j < ca.length; j++){
+        if(vList.contains(ca[j]) && ca[j] != vowel){
+          vowel = ca[j];
+          vowelCount ++;
+        }
+        if(vowelCount > k){
+          if(max < j-i){
+            max = j-i;
+          }
+          break;
+        }
+      }
+    }
+    System.out.println(max);
+  }
+
+  static int stringToInteger(String s){
+    if(s == null){
+      return -1;
+    }
+
+    boolean isNegative = false;
+
+    if(s.startsWith("-")){
+      isNegative = true;
+    }
+
+    int number = 0;
+    for(int i  = 0; i < s.length(); i++){
+      number = number * 10;
+      int temp = s.charAt(i) - '0';
+      if(temp < 0 || temp > 9 ){
+        return -1;
+      }
+      number = number + s.charAt(i) - '0';
+    }
+    if(isNegative){
+      number = number * -1;
+    }
+
+    return number;
+  }
+
+  static String integerToString(int n){
+
+    StringBuilder sb = new StringBuilder();
+
+    boolean isNegative = false;
+
+    if(n < 0){
+      isNegative = true;
+      n = n * -1;
+    }
+
+    while(n != 0){
+      int t = n % 10;
+      n = n/10;
+      sb.append(t);
+    }
+
+    sb.reverse();
+    if(isNegative) {
+      return "-" + sb.toString();
+    }else{
+      return sb.toString();
+    }
+  }
+
+  /*
+   * The rotation can be performed in layers, where you perform a cyclic swap
+   * on the edges on each layer. In the first for loop, we rotate the first
+   * layer (outermost edges). We rotate the edges by doing a four-way swap
+   * first on the corners, then on the element clockwise from the edges, then
+   * on the element three steps away. Once the exterior elements are rotated,
+   * we then rotate the interior region�s edges.
+   */
+
+  public static void rotate(int[][] matrix, int n) {
+    for (int layer = 0; layer < n / 2; ++layer) {
+      int first = layer;
+      int last = n - 1 - layer;
+      for (int i = first; i < last; ++i) {
+        int offset = i - first;
+        int top = matrix[first][i]; // save top
+        // left -> top
+        matrix[first][i] = matrix[last - offset][first];
+
+        // bottom -> left
+        matrix[last - offset][first] = matrix[last][last - offset];
+
+        // right -> bottom
+        matrix[last][last - offset] = matrix[i][last];
+
+        // top -> right
+        matrix[i][last] = top; // right <- saved top
+      }
+    }
+  }
+
+  //https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/
+  static boolean queen(int[][] a, int col){
+
+    if(col >= a[0].length){
+      return true;
+    }
+
+    for(int i = 0; i < a.length; i++){
+      if(isQueenSafe(a, i, col)){
+        //place the queen
+        a[i][col] = 1;
+        //System.out.println(ArrayUtils.toString(a));
+        if(queen(a,  col+1)){
+          return true;
+        }
+        //reset backtrack
+        a[i][col] = 0;
+      }
+    }
+    return false;
+  }
+
+  static boolean isQueenSafe(int a[][], int row, int col){
+
+    int i, j;
+    // check columns only check the last column because we are placeing from left
+
+    for(i = 0; i < col; i++){
+      if(a[row][i] == 1) {
+        return false;
+      }
+    }
+
+    //check row
+    for(i = 0; i < a.length; i++){
+      if(a[i][col] == 1) {
+        return false;
+      }
+    }
+
+    //check upper diogonal left side
+    for(i = row, j = col; i >= 0 && j >= 0; i--, j--){
+      if(a[i][j] == 1) {
+        return false;
+      }
+    }
+
+    //check lower diogonal left side
+    for(i = row, j = col; i < a.length && j >=0; i++, j--){
+      if(a[i][j] == 1) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  //TODO
+  //https://www.geeksforgeeks.org/minimize-number-unique-characters-string/
+  //https://www.geeksforgeeks.org/lexicographically-middle-string/
+
+  //https://www.geeksforgeeks.org/edit-distance-and-lcs-longest-common-subsequence/
 
 
   public static void main(String[] args){
+
+    int board[][] = {{0, 0, 0, 0},
+        {0, 0, 0, 0},
+        {0, 0, 0, 0},
+        {0, 0, 0, 0}
+    };
+    queen(board, 0);
+
+
+    System.out.println(ArrayUtils.toString(board));
+    SA.longestSubStringWithDistinctVowles("artyebui", 2);
+    SA.longestSubStringWithoutRepeatingChars("ABDEFGABEF");
+    StringBuilder sbAddBinary = new StringBuilder();
+    SA.addBinary("1", "1", 0, 0, sbAddBinary);
+    System.out.println(sbAddBinary.reverse());
 
     //http://javarevisited.blogspot.com/2016/10/how-to-check-if-two-rectangle-overlap-in-java-algorithm.html#more
     //http://javarevisited.blogspot.com/2016/07/how-to-calculate-gcf-and-lcm-of-two-numbers-in-java-example.html#more
@@ -1946,9 +2354,22 @@ public class SA {
     //https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237
 
 
+
+    SA.chekBinaryStringPowerOf4or6("100110110", 2);
+
+
+    SA.numberOfCounterClockwise();
+    //int[] mj = {1,0,1,0,1};
+    int[] mj = {1,1,1,1,0};
+    System.out.println(SA.maximumJumpToReach(mj));
+
+    String scpa[] = {"geeksforgeeks", "geeks", "geek", "geekzer"};
+    System.out.println(SA.findLongestCommonPrefix(scpa, scpa.length));
+
     String lcss1 ="GeeksforGeeks";
     String lcss2 ="GeeksQuiz";
-    SA.longestCommonSubsequence(lcss1, lcss2);
+    SA.longestCommonSubsequence(lcss1.toCharArray(), lcss2.toCharArray(),lcss1.length(), lcss2.length());
+    System.out.println(SA.longestCommonSubsequence(lcss1.toCharArray(), lcss2.toCharArray()));
 
     System.out.println(SA.rotatedByTwoPlaces("amazon", "azonam", 2 ));
     System.out.println(SA.rotatedByTwoPlaces("amazon", "onamaz", 2 ));
